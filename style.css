@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    background: #F76C6C;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+header {
+    background: url(./header.jpg) center/cover;
+    min-height: 250px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+header h1{
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+main {
+    background:#F3F2F3;
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+
+h2 {
+    padding-bottom: 20px;
+    padding-top: 70px;
+    margin: 0;
+}
+
+section p {
+    padding-right: 30px;
+}
+
+
+.featured-posts {
+    height: 420px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding-top: 40px;
+    padding-right:10px;
+}
+
+.featured-posts h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-top: 10px;
+}
+
+article:first-of-type{
+    grid-column-start: 1;
+    grid-column-end:3 ;
+}
+
+article {
+    height: 80px;
+    background: rgb(255,254,254);
+    box-shadow: 2px 2px 10px rgb(133, 133, 133);
+    border-radius: 10px;
+}
+
+article>h1 {
+    color: black;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+footer {
+    background:#F76C6C;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    ul {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 360px;
+    }
+
+    main {
+        max-width: 65ch;
+    }
+
+    .featured-posts {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 300px;
+    }
+
+    .featured-posts h2 {
+        grid-column: 1 /-1;
+    }
+
+    article h1 {
+        padding-top: 15px;
+    }
+
+    article:first-of-type {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:2 ;
+        grid-row-end: 4;
+        height: 100%;
+    }
+
+    @media screen {
+        header h1 {
+            filter: drop-shadow(10px 10px 4px #1A1B1A)
+        }
+    }
+
+
+}
+
